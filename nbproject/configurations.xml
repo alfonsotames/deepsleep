@@ -1,0 +1,2068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+        <df name="zephyr">
+          <df name="misc">
+            <df name="generated">
+              <in>configs.c</in>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="src">
+        <in>main.c</in>
+      </df>
+    </df>
+    <logicalFolder name="zephyr"
+                   displayName="zephyr"
+                   projectFiles="true"
+                   root="../..">
+      <logicalFolder name="proyectos" displayName="proyectos" projectFiles="true">
+        <logicalFolder name="samples" displayName="samples" projectFiles="true">
+          <logicalFolder name="basic" displayName="basic" projectFiles="true">
+            <logicalFolder name="blinky" displayName="blinky" projectFiles="true">
+              <logicalFolder name="build" displayName="build" projectFiles="true">
+                <logicalFolder name="zephyr" displayName="zephyr" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="generated" displayName="generated" projectFiles="true">
+                      <logicalFolder name="syscalls" displayName="syscalls" projectFiles="true">
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/atomic.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/device.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/errno_private.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/gpio.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/kernel.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/kobject.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/libc-hooks.h</itemPath>
+                        <itemPath>../samples/basic/blinky/build/zephyr/include/generated/syscalls/uart.h</itemPath>
+                      </logicalFolder>
+                    </logicalFolder>
+                  </logicalFolder>
+                  <logicalFolder name="misc" displayName="misc" projectFiles="true">
+                    <logicalFolder name="generated" displayName="generated" projectFiles="true">
+                      <itemPath>../samples/basic/blinky/build/zephyr/misc/generated/configs.c</itemPath>
+                    </logicalFolder>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="src" displayName="src" projectFiles="true">
+                <itemPath>../samples/basic/blinky/src/main.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="zephyrproject"
+                     displayName="zephyrproject"
+                     projectFiles="true">
+        <logicalFolder name="modules" displayName="modules" projectFiles="true">
+          <logicalFolder name="hal" displayName="hal" projectFiles="true">
+            <logicalFolder name="atmel" displayName="atmel" projectFiles="true">
+              <logicalFolder name="asf" displayName="asf" projectFiles="true">
+                <logicalFolder name="sam0" displayName="sam0" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="samd21" displayName="samd21" projectFiles="true">
+                      <logicalFolder name="component" displayName="component" projectFiles="true">
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/eic.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/gclk.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/nvmctrl.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/pm.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/port.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/sercom.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/sysctrl.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/tcc.h</itemPath>
+                        <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component/wdt.h</itemPath>
+                      </logicalFolder>
+                      <itemPath>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/samd21g18a.h</itemPath>
+                    </logicalFolder>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="cmsis" displayName="cmsis" projectFiles="true">
+              <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+                <logicalFolder name="Core" displayName="Core" projectFiles="true">
+                  <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                    <itemPath>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                    <itemPath>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm0plus.h</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="zephyr" displayName="zephyr" projectFiles="true">
+          <logicalFolder name="arch" displayName="arch" projectFiles="true">
+            <logicalFolder name="arm" displayName="arm" projectFiles="true">
+              <logicalFolder name="core" displayName="core" projectFiles="true">
+                <logicalFolder name="aarch32" displayName="aarch32" projectFiles="true">
+                  <logicalFolder name="cortex_m" displayName="cortex_m" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/scb.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/thread_abort.c</itemPath>
+                  </logicalFolder>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/fatal.c</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/irq_manage.c</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/nmi.c</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/prep_c.c</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/swap.c</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/core/aarch32/thread.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="include" displayName="include" projectFiles="true">
+                <logicalFolder name="aarch32" displayName="aarch32" projectFiles="true">
+                  <logicalFolder name="cortex_m" displayName="cortex_m" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m/exc.h</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m/stack.h</itemPath>
+                  </logicalFolder>
+                  <itemPath>../../zephyrproject/zephyr/arch/arm/include/aarch32/kernel_arch_func.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="common" displayName="common" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/arch/common/isr_tables.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/arch/common/sw_isr_common.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="boards" displayName="boards" projectFiles="true">
+            <logicalFolder name="arm" displayName="arm" projectFiles="true">
+              <logicalFolder name="itsybitsy_m0"
+                             displayName="itsybitsy_m0"
+                             projectFiles="true">
+                <itemPath>../../zephyrproject/zephyr/boards/arm/itsybitsy_m0/pinmux.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
+            <logicalFolder name="console" displayName="console" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/console/uart_console.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/gpio/gpio_sam0.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/gpio/gpio_utils.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="i2c" displayName="i2c" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/i2c/i2c-priv.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/i2c/i2c_common.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/i2c/i2c_sam0.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="interrupt_controller"
+                           displayName="interrupt_controller"
+                           projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/interrupt_controller/intc_sam0_eic.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/interrupt_controller/intc_sam0_eic_priv.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pinmux" displayName="pinmux" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/pinmux/pinmux_sam0.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/pwm/pwm_sam0_tcc.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="serial" displayName="serial" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/serial/uart_sam0.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="spi" displayName="spi" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/spi/spi_context.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/spi/spi_sam0.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="timer" displayName="timer" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/timer/cortex_m_systick.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/drivers/timer/sys_clock_init.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="watchdog" displayName="watchdog" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/drivers/watchdog/wdt_sam0.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="kernel" displayName="kernel" projectFiles="true">
+            <logicalFolder name="include" displayName="include" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/kernel/include/kernel_arch_interface.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/kernel/include/kernel_internal.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/kernel/include/ksched.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/kernel/include/kswap.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/kernel/include/offsets_short.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../zephyrproject/zephyr/kernel/atomic_c.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/device.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/errno.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/fatal.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/idle.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/init.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/kheap.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/mailbox.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/mem_slab.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/mempool.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/msg_q.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/mutex.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/pipes.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/queue.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/sched.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/sem.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/smp.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/stack.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/system_work_q.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/thread.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/thread_abort.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/timeout.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/timer.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/version.c</itemPath>
+            <itemPath>../../zephyrproject/zephyr/kernel/work_q.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="lib" displayName="lib" projectFiles="true">
+            <logicalFolder name="libc" displayName="libc" projectFiles="true">
+              <logicalFolder name="minimal" displayName="minimal" projectFiles="true">
+                <logicalFolder name="include" displayName="include" projectFiles="true">
+                  <logicalFolder name="sys" displayName="sys" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/sys/_timespec.h</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/sys/_types.h</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/sys/types.h</itemPath>
+                  </logicalFolder>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/ctype.h</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/stdint.h</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/stdio.h</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/stdlib.h</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/string.h</itemPath>
+                  <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/include/time.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="source" displayName="source" projectFiles="true">
+                  <logicalFolder name="stdlib" displayName="stdlib" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/abort.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/atoi.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/bsearch.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/exit.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/malloc.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/strtol.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/strtoul.c</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="stdout" displayName="stdout" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/fprintf.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/sprintf.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/stdout_console.c</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="string" displayName="string" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/string/string.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/string/strncasecmp.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/string/strspn.c</itemPath>
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/string/strstr.c</itemPath>
+                  </logicalFolder>
+                  <logicalFolder name="time" displayName="time" projectFiles="true">
+                    <itemPath>../../zephyrproject/zephyr/lib/libc/minimal/source/time/gmtime.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="os" displayName="os" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/lib/os/crc16_sw.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/crc32_sw.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/crc7_sw.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/crc8_sw.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/dec.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/fdtable.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/heap-validate.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/heap.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/heap.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/hex.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/mempool.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/notify.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/onoff.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/prf.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/printk.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/rb.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/sem.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/thread_entry.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/timeutil.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/os/work_q.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="posix" displayName="posix" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/lib/posix/nanosleep.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/lib/posix/pthread_common.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="soc" displayName="soc" projectFiles="true">
+            <logicalFolder name="arm" displayName="arm" projectFiles="true">
+              <logicalFolder name="atmel_sam0" displayName="atmel_sam0" projectFiles="true">
+                <logicalFolder name="common" displayName="common" projectFiles="true">
+                  <itemPath>../../zephyrproject/zephyr/soc/arm/atmel_sam0/common/soc_samd2x.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="subsys" displayName="subsys" projectFiles="true">
+            <logicalFolder name="logging" displayName="logging" projectFiles="true">
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_backend_uart.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_core.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_list.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_list.h</itemPath>
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_msg.c</itemPath>
+              <itemPath>../../zephyrproject/zephyr/subsys/logging/log_output.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile></projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0"
+                 commonFlags="-march=armv6s-m -g -Os -std=c99 -ffreestanding"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
+          <buildCommand>ninja</buildCommand>
+          <cleanCommand>ninja clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/irq_init.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/scb.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/thread_abort.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/fatal.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/irq_manage.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/nmi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/prep_c.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/linker</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/swap.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/arm/core/aarch32/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/common/isr_tables.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/common</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/arch/common/sw_isr_common.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/boards/arm/itsybitsy_m0/pinmux.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/console/uart_console.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/gpio/gpio_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/i2c/i2c_common.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/i2c/i2c_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/interrupt_controller/intc_sam0_eic.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/pinmux/pinmux_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/pwm/pwm_sam0_tcc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/serial/uart_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/spi/spi_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/timer/cortex_m_systick.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/timer</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/timer/sys_clock_init.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/drivers/watchdog/wdt_sam0.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/atomic_c.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/device.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/common</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/errno.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/fatal.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/debug</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/idle.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/timer</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/init.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/debug</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include/linker</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/kheap.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/mailbox.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/mem_slab.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/mempool.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/msg_q.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/mutex.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/pipes.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/queue.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/sched.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/timer</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/sem.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/smp.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/stack.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/system_work_q.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/thread.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/thread_abort.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/timeout.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/timer</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/timer.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/version.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/kernel/work_q.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/abort.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/atoi.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/bsearch.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/exit.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/malloc.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/linker</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/strtol.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib/strtoul.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/fprintf.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/sprintf.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/stdout/stdout_console.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/string/string.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include/sys</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/string/strncasecmp.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/string/strspn.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/string/strstr.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/libc/minimal/source/time/gmtime.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/crc16_sw.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/crc32_sw.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/crc7_sw.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/crc8_sw.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/dec.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/fdtable.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include/sys</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/heap-validate.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/heap.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/hex.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/mempool.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/notify.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/onoff.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/prf.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/printk.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/rb.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/sem.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/thread_entry.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/timeutil.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include/sys</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/os/work_q.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/posix/nanosleep.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/posix</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include/sys</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/lib/posix/pthread_common.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/kernel/include</pElem>
+            <pElem>../../zephyrproject/zephyr/arch/arm/include/aarch32/cortex_m</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/soc/arm/atmel_sam0/common/soc_samd2x.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/subsys/logging/log_backend_uart.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/subsys/logging</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/subsys/logging/log_core.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/subsys/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/app_memory</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/subsys/logging/log_list.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/subsys/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/subsys/logging/log_msg.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/subsys/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../../zephyrproject/zephyr/subsys/logging/log_output.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/subsys/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="../samples/basic/blinky/build/zephyr/misc/generated/configs.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../samples/basic/blinky/src/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="build/zephyr/misc/generated/configs.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <folder path="0/build">
+        <cTool>
+          <incDir>
+            <pElem>build/zephyr/misc/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/src">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>src</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/cmsis/CMSIS/Core/Include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/proyectos/samples/basic/blinky/build">
+        <cTool>
+          <incDir>
+            <pElem>../samples/basic/blinky/build/zephyr/misc/generated</pElem>
+            <pElem>../samples/basic/blinky/build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/proyectos/samples/basic/blinky/src">
+        <cTool>
+          <incDir>
+            <pElem>../samples/basic/blinky/src</pElem>
+            <pElem>../samples/basic/blinky/build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../samples/basic/blinky/build/zephyr/include/generated</pElem>
+            <pElem>../samples/basic/blinky/build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/arch/common">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/boards">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/zephyr/boards/arm/itsybitsy_m0</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/console">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/console</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/gpio">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/gpio</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/interrupt_controller</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/i2c">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/i2c</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/interrupt_controller">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/interrupt_controller</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers/interrupt_controller</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/pinmux">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/pinmux</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/pwm">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/pwm</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/serial">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/serial</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/spi">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>build/zephyr/include/generated/syscalls</pElem>
+            <pElem>../../zephyrproject/zephyr/drivers/spi</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>build/zephyr/include/generated</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/timer">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/timer</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/drivers/watchdog">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/drivers/watchdog</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include/logging</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/common</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>../../zephyrproject/zephyr/include/drivers</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/lib/libc/minimal/source/stdlib">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/source/stdlib</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/lib/libc/minimal/source/stdout">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/source/stdout</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/lib/libc/minimal/source/string">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/source/string</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/lib/libc/minimal/source/time">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/source/time</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include/sys</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/lib/os">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/lib/os</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="zephyr/zephyrproject/zephyr/soc">
+        <cTool>
+          <incDir>
+            <pElem>../../zephyrproject/zephyr/soc/arm/atmel_sam0/common</pElem>
+            <pElem>../../zephyrproject/zephyr/include/arch/arm/aarch32</pElem>
+            <pElem>/usr/local/Caskroom/gcc-arm-embedded/9-2020-q2-update/gcc-arm-none-eabi-9-2020-q2-update/lib/gcc/arm-none-eabi/9.3.1/include</pElem>
+            <pElem>../../zephyrproject/zephyr/lib/libc/minimal/include</pElem>
+            <pElem>../../zephyrproject/zephyr/include</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21</pElem>
+            <pElem>../../zephyrproject/modules/hal/atmel/asf/sam0/include/samd21/component</pElem>
+            <pElem>../../zephyrproject/zephyr/include/sys</pElem>
+            <pElem>build</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <item path="src/main.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
