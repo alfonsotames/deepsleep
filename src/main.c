@@ -10,6 +10,9 @@
 
 #define SLEEP_TIME_MS   80
 
+// Switch Button and Led configured in dts at:
+// LED0 = Pin PA17
+// SW0 = Pin PA21
 
 #define LED0_NODE       DT_ALIAS(led0)
 #define LED0_GPIO_LABEL DT_GPIO_LABEL(LED0_NODE, gpios)
@@ -21,43 +24,66 @@
 #define SW0_GPIO_PIN    DT_GPIO_PIN(SW0_NODE, gpios)
 #define SW0_GPIO_FLAGS  (GPIO_INPUT | DT_GPIO_FLAGS(SW0_NODE, gpios))
 
-void configGCLK6() {
+// Enable EIC clock with the Ultra Low Power 32Khz clock OSCULP32K
+// for interrupt working on GPIO_INT_EDGE_RISING
 
-    // enable EIC clock
-    GCLK->CLKCTRL.bit.CLKEN = 0; //disable GCLK module
+void config_eic_clk() {
+    //GCLK->CLKCTRL.bit.CLKEN = 0; //disable GCLK module
     while (GCLK->STATUS.bit.SYNCBUSY);
-
-    GCLK->CLKCTRL.reg = (uint16_t) (GCLK_CLKCTRL_CLKEN | GCLK_CLKCTRL_GEN_GCLK6 | GCLK_CLKCTRL_ID(0x05U)); //EIC clock switched on GCLK6
+    GCLK->CLKCTRL.reg = (uint16_t) (GCLK_CLKCTRL_CLKEN | GCLK_CLKCTRL_GEN_GCLK6
+            | GCLK_CLKCTRL_ID(0x05U)); //EIC clock switched on GCLK1
     while (GCLK->STATUS.bit.SYNCBUSY);
-    GCLK->GENCTRL.reg = (GCLK_GENCTRL_GENEN | GCLK_GENCTRL_SRC_OSCULP32K | GCLK_GENCTRL_ID(6)); //source for GCLK6 is OSCULP32K
+    GCLK->GENCTRL.reg = (GCLK_GENCTRL_GENEN | GCLK_GENCTRL_SRC_OSCULP32K
+            | GCLK_GENCTRL_ID(6)); //source for GCLK6 is OSCULP32K
     while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY);
-
-    GCLK->GENCTRL.bit.RUNSTDBY = 1; //GCLK6 run standby
+    GCLK->GENCTRL.bit.RUNSTDBY = 1; //GCLK1 run standby
     while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY);
-
 }
-
-
 
 static struct gpio_callback button_cb_data;
 
-void button_pressed(const struct device *dev, struct gpio_callback *cb,
-        uint32_t pins) {
+volatile bool pressed; 
+void button_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
+    printk("Button pressed\n");
+    pressed=true;
+}
 
-    //NVIC_SystemReset(); 
-    //timerStart(); //se atora
-    printk("Button pressed at %" PRIu32 "\n", k_cycle_get_32());
+void sleep() {
+    NVMCTRL->CTRLB.bit.SLEEPPRM = NVMCTRL_CTRLB_SLEEPPRM_DISABLED_Val;
+    SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
+    printk("GOING TO SLEEP...");
+    SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+    while (WDT->STATUS.bit.SYNCBUSY);
+    __DSB(); // Data sync to ensure outgoing memory accesses complete
+    __WFI(); // Wait for interrupt (places device in sleep mode) 
+    while (WDT->STATUS.bit.SYNCBUSY);
+    SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+    printk("AWAKE!");
+}
 
+const struct device *button;
+const struct device *led;
+
+// Blink LED0 5 times
+void blink() {
+    bool led_is_on = false;
+    for (int x=0; x<10; x++) {
+        gpio_pin_set(led, LED0_GPIO_PIN, (int) led_is_on);
+        led_is_on = !led_is_on;
+        k_msleep(SLEEP_TIME_MS);
+        
+    }
 }
 
 void main() {
 
-    configGCLK6();
-    EIC->WAKEUP.reg |= (1 << 5);
+    config_eic_clk();
+
+    pressed=false;
     int ret;
 
-    const struct device *button = device_get_binding(SW0_GPIO_LABEL);
-    const struct device *led = device_get_binding(LED0_GPIO_LABEL);
+    button = device_get_binding(SW0_GPIO_LABEL);
+    led = device_get_binding(LED0_GPIO_LABEL);
 
     if (button == NULL) {
         printk("Error: didn't find %s device\n", SW0_GPIO_LABEL);
@@ -70,64 +96,38 @@ void main() {
 
     ret = gpio_pin_configure(led, LED0_GPIO_PIN, LED0_GPIO_FLAGS);
     if (ret != 0) {
-        printk("Error %d: failed to configure LED device %s pin %d\n", ret, LED0_GPIO_LABEL, LED0_GPIO_PIN);
+        printk("Error %d: failed to configure LED device %s pin %d\n", ret, 
+                LED0_GPIO_LABEL, LED0_GPIO_PIN);
         return;
     }
 
     ret = gpio_pin_configure(button, SW0_GPIO_PIN, SW0_GPIO_FLAGS);
     if (ret != 0) {
-        printk("Error %d: failed to configure %s pin %d\n", ret, SW0_GPIO_LABEL, SW0_GPIO_PIN);
+        printk("Error %d: failed to configure %s pin %d\n", ret, 
+                SW0_GPIO_LABEL, SW0_GPIO_PIN);
         return;
-    } else {
-        printk("Set up button at %s pin %d\n", SW0_GPIO_LABEL, SW0_GPIO_PIN);
-    }
+    } 
 
-    ret = gpio_pin_interrupt_configure(button,
-            SW0_GPIO_PIN,
+    ret = gpio_pin_interrupt_configure(button, SW0_GPIO_PIN,
             GPIO_INT_EDGE_RISING | GPIO_INT_DEBOUNCE);
     if (ret != 0) {
-        printk("Error %d: failed to configure interrupt on %s pin %d\n", ret, SW0_GPIO_LABEL, SW0_GPIO_PIN);
+        printk("Error %d: failed to configure interrupt on %s pin %d\n", ret, 
+                SW0_GPIO_LABEL, SW0_GPIO_PIN);
         return;
-    } else {
-        printk("Set up interrupt at %s pin %d\n", SW0_GPIO_LABEL, SW0_GPIO_PIN);
     }
 
     gpio_init_callback(&button_cb_data, button_pressed, BIT(SW0_GPIO_PIN));
     gpio_add_callback(button, &button_cb_data);
 
+    EIC->WAKEUP.reg |= (1 << 5U); // Configured in EXTINT5 for PA21
 
-
-    bool led_is_on = true;
-    int c = 0;
     while (1) {
-        gpio_pin_set(led, LED0_GPIO_PIN, (int) led_is_on);
-        led_is_on = !led_is_on;
-
-        if (c > 15) {
-            c = 0;
-
-
-            NVMCTRL->CTRLB.bit.SLEEPPRM = NVMCTRL_CTRLB_SLEEPPRM_DISABLED_Val;
-
-            SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
-            printk("SLEEPING...");
-            SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
-
-            while (WDT->STATUS.bit.SYNCBUSY);
-
-            __DSB(); // Data sync to ensure outgoing memory accesses complete
-
-            __WFI(); // Wait for interrupt (places device in sleep mode) 
-
-            while (WDT->STATUS.bit.SYNCBUSY);
-            
-            SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
-            printk("AWAKE");
-
-
+        if (pressed) {
+            blink();
+            pressed=false;
+            sleep(); // Go to deep sleep
         }
-        c++;
-        k_msleep(SLEEP_TIME_MS);
+        k_msleep(1);
     }
 
 }
