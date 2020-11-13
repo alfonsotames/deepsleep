@@ -10,7 +10,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/mufufu/opt/zephyr/zephyrmaster/proyectos/deepsleep/src/main.c</file>
+            <file>file:/Users/alfonso/zephyr/proyectos/deepsleep/src/main.c</file>
+            <file>file:/Users/alfonso/zephyr/proyectos/deepsleep/prj.conf</file>
+            <file>file:/Users/alfonso/zephyr/proyectos/deepsleep/README.rst</file>
+            <file>file:/Users/alfonso/zephyr/proyectos/deepsleep/sample.yaml</file>
+            <file>file:/Users/alfonso/zephyr/proyectos/deepsleep/CMakeLists.txt</file>
         </group>
     </open-files>
 </project-private>

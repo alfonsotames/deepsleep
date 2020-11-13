@@ -6,7 +6,7 @@
         <df name="app">
         </df>
         <df name="CMakeFiles">
-          <df name="3.16.3">
+          <df name="3.18.4">
             <df name="CompilerIdASM">
             </df>
             <df name="CompilerIdC">
@@ -45,6 +45,14 @@
                   <df name="wifi">
                     <df name="CMakeFiles">
                     </df>
+                  </df>
+                </df>
+              </df>
+              <df name="sam0">
+                <df name="CMakeFiles">
+                </df>
+                <df name="include">
+                  <df name="CMakeFiles">
                   </df>
                 </df>
               </df>
@@ -102,24 +110,6 @@
           </df>
           <df name="lvgl">
             <df name="CMakeFiles">
-              <df name="..__modules__lib__gui__lvgl.dir">
-                <df name="src">
-                  <df name="lv_core">
-                  </df>
-                  <df name="lv_draw">
-                  </df>
-                  <df name="lv_font">
-                  </df>
-                  <df name="lv_hal">
-                  </df>
-                  <df name="lv_misc">
-                  </df>
-                  <df name="lv_themes">
-                  </df>
-                  <df name="lv_widgets">
-                  </df>
-                </df>
-              </df>
             </df>
           </df>
           <df name="mbedtls">
@@ -185,24 +175,6 @@
           <df name="stm32">
             <df name="CMakeFiles">
             </df>
-            <df name="stm32cube">
-              <df name="CMakeFiles">
-                <df name="..__modules__hal__stm32__stm32cube.dir">
-                  <df name="stm32l4xx">
-                    <df name="drivers">
-                      <df name="src">
-                      </df>
-                    </df>
-                    <df name="soc">
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="stm32l4xx">
-                <df name="CMakeFiles">
-                </df>
-              </df>
-            </df>
           </df>
           <df name="tfm">
             <df name="CMakeFiles">
@@ -254,12 +226,6 @@
                         <df name="arch__arm__core__aarch32__cortex_m.dir">
                         </df>
                       </df>
-                      <df name="mpu">
-                        <df name="CMakeFiles">
-                          <df name="arch__arm__core__aarch32__cortex_m__mpu.dir">
-                          </df>
-                        </df>
-                      </df>
                     </df>
                   </df>
                 </df>
@@ -277,6 +243,14 @@
             </df>
           </df>
           <df name="boards">
+            <df name="arm">
+              <df name="itsybitsy_m0">
+                <df name="CMakeFiles">
+                  <df name="boards__arm__itsybitsy_m0.dir">
+                  </df>
+                </df>
+              </df>
+            </df>
             <df name="CMakeFiles">
             </df>
           </df>
@@ -307,17 +281,15 @@
             </df>
             <df name="zephyr.dir">
               <df name="drivers">
-                <df name="clock_control">
-                </df>
                 <df name="console">
                 </df>
                 <df name="interrupt_controller">
                 </df>
                 <df name="pinmux">
-                  <df name="stm32">
-                  </df>
                 </df>
                 <df name="timer">
+                </df>
+                <df name="watchdog">
                 </df>
               </df>
               <df name="lib">
@@ -330,20 +302,14 @@
               </df>
               <df name="soc">
                 <df name="arm">
-                  <df name="st_stm32">
+                  <df name="atmel_sam0">
                     <df name="common">
-                    </df>
-                    <df name="stm32l4">
                     </df>
                   </df>
                 </df>
               </df>
               <df name="subsys">
                 <df name="logging">
-                </df>
-                <df name="power">
-                  <df name="policy">
-                  </df>
                 </df>
               </df>
             </df>
@@ -357,23 +323,21 @@
             </df>
           </df>
           <df name="drivers">
-            <df name="clock_control">
-              <df name="CMakeFiles">
-              </df>
-            </df>
             <df name="CMakeFiles">
             </df>
             <df name="console">
               <df name="CMakeFiles">
               </df>
             </df>
-            <df name="display">
-              <df name="CMakeFiles">
-              </df>
-            </df>
             <df name="gpio">
               <df name="CMakeFiles">
                 <df name="drivers__gpio.dir">
+                </df>
+              </df>
+            </df>
+            <df name="i2c">
+              <df name="CMakeFiles">
+                <df name="drivers__i2c.dir">
                 </df>
               </df>
             </df>
@@ -401,7 +365,17 @@
                 </df>
               </df>
             </df>
+            <df name="spi">
+              <df name="CMakeFiles">
+                <df name="drivers__spi.dir">
+                </df>
+              </df>
+            </df>
             <df name="timer">
+              <df name="CMakeFiles">
+              </df>
+            </df>
+            <df name="watchdog">
               <df name="CMakeFiles">
               </df>
             </df>
@@ -763,12 +737,6 @@
             </df>
             <df name="gui">
               <df name="CMakeFiles">
-              </df>
-              <df name="lvgl">
-                <df name="CMakeFiles">
-                  <df name="lib__gui__lvgl.dir">
-                  </df>
-                </df>
               </df>
             </df>
             <df name="libc">
@@ -2658,24 +2626,18 @@
           </df>
           <df name="soc">
             <df name="arm">
-              <df name="CMakeFiles">
-              </df>
-              <df name="common">
-                <df name="cortex_m">
-                  <df name="CMakeFiles">
-                    <df name="soc__arm__common__cortex_m.dir">
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="st_stm32">
+              <df name="atmel_sam0">
                 <df name="CMakeFiles">
                 </df>
                 <df name="common">
                   <df name="CMakeFiles">
                   </df>
                 </df>
-                <df name="stm32l4">
+              </df>
+              <df name="CMakeFiles">
+              </df>
+              <df name="common">
+                <df name="cortex_m">
                   <df name="CMakeFiles">
                   </df>
                 </df>
@@ -2739,15 +2701,10 @@
             </df>
           </df>
           <in>isr_tables.c</in>
-          <in>zephyr.dts</in>
         </df>
       </df>
       <df name="src">
-        <in>buttons.c</in>
-        <in>buttons.h</in>
         <in>main.c</in>
-        <in>power_mgmt.c</in>
-        <in>power_mgmt.h</in>
       </df>
     </df>
   </logicalFolder>
@@ -2756,7 +2713,7 @@
     <conf name="Default" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>
@@ -2789,9 +2746,8 @@
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>edbg -t samd21 -b -p -f build/zephyr/zephyr.bin</runcommandpicklistitem>
-          <runcommandpicklistitem>west flash</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>west flash</runcommand>
+        <runcommand>edbg -t samd21 -b -p -f build/zephyr/zephyr.bin</runcommand>
         <rundir>.</rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
