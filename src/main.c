@@ -6,128 +6,242 @@
 #include <sys/util.h>
 #include <sys///printk.h>
 #include <inttypes.h>
-#include <soc.h>
+#include <power/power.h>
+
+#include "buttons.h"
 
 #define SLEEP_TIME_MS   80
+
+
+/**
+  * @brief  Processor uses deep sleep as its low power mode
+  * @rmtoll SCB_SCR      SLEEPDEEP     LL_LPM_EnableDeepSleep
+  * @retval None
+  */
+__STATIC_INLINE void LL_LPM_EnableDeepSleep(void)
+{
+  /* Set SLEEPDEEP bit of Cortex System Control Register */
+  SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
+}
+
+/**
+  * @brief  Disable SRAM3 content retention in Stop mode
+  * @rmtoll CR1          RRSTP           LL_PWR_DisableSRAM3Retention
+  * @retval None
+  */
+__STATIC_INLINE void LL_PWR_DisableSRAM3Retention(void)
+{
+  CLEAR_BIT(PWR->CR1, PWR_CR3_RRS);
+}
+
+
 
 // Switch Button and Led configured in dts at:
 // LED0 = Pin PA17
 // SW0 = Pin PA21
 
-#define LED0_NODE       DT_ALIAS(led0)
-#define LED0_GPIO_LABEL DT_GPIO_LABEL(LED0_NODE, gpios)
-#define LED0_GPIO_PIN   DT_GPIO_PIN(LED0_NODE, gpios)
-#define LED0_GPIO_FLAGS (GPIO_OUTPUT | DT_GPIO_FLAGS(LED0_NODE, gpios))
 
-#define SW0_NODE        DT_ALIAS(sw0)
-#define SW0_GPIO_LABEL  DT_GPIO_LABEL(SW0_NODE, gpios)
-#define SW0_GPIO_PIN    DT_GPIO_PIN(SW0_NODE, gpios)
-#define SW0_GPIO_FLAGS  (GPIO_INPUT | DT_GPIO_FLAGS(SW0_NODE, gpios))
 
-// Enable EIC clock with the Ultra Low Power 32Khz clock OSCULP32K
-// for interrupt working on GPIO_INT_EDGE_RISING
 
-void config_eic_clk() {
-    //GCLK->CLKCTRL.bit.CLKEN = 0; //disable GCLK module
-    while (GCLK->STATUS.bit.SYNCBUSY);
-    GCLK->CLKCTRL.reg = (uint16_t) (GCLK_CLKCTRL_CLKEN | GCLK_CLKCTRL_GEN_GCLK6
-            | GCLK_CLKCTRL_ID(0x05U)); //EIC clock switched on GCLK1
-    while (GCLK->STATUS.bit.SYNCBUSY);
-    GCLK->GENCTRL.reg = (GCLK_GENCTRL_GENEN | GCLK_GENCTRL_SRC_OSCULP32K
-            | GCLK_GENCTRL_ID(6)); //source for GCLK6 is OSCULP32K
-    while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY);
-    GCLK->GENCTRL.bit.RUNSTDBY = 1; //GCLK1 run standby
-    while (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY);
-}
 
-static struct gpio_callback button_cb_data;
+#define SLEEP_TIME_MS   80
+
 
 volatile bool pressed; 
-void button_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
-    printk("Button pressed\n");
+
+
+
+static struct k_timer timer;
+
+
+void peep(int n) {
+        gpio_pin_set(buz, BUZ0_GPIO_PIN, true);
+        k_msleep(n);
+        gpio_pin_set(buz, BUZ0_GPIO_PIN, false);
+        //k_msleep(40);
+}
+
+
+// Blink LED0 5 times
+void blink(int n, int delay) {
+
+    bool led_is_on = false;
+    for (int x=0; x<n; x++) {
+
+        gpio_pin_set(led, LED0_GPIO_PIN, (int) led_is_on);
+        led_is_on = !led_is_on;
+        k_msleep(delay);  
+    }
+}
+
+
+void hbeat() {
+
+
+}
+
+
+void button0_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
+    //peep();
+    //printk("Button 0 pressed\n");
+    pressed=true;
+
+}
+
+
+void button1_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
+    //peep();
+    //printk("Button 1 pressed\n");
     pressed=true;
 }
 
-void sleep() {
-    NVMCTRL->CTRLB.bit.SLEEPPRM = NVMCTRL_CTRLB_SLEEPPRM_DISABLED_Val;
-    SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
-    printk("GOING TO SLEEP...");
-    SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
-    while (WDT->STATUS.bit.SYNCBUSY);
-    __DSB(); // Data sync to ensure outgoing memory accesses complete
-    __WFI(); // Wait for interrupt (places device in sleep mode) 
-    while (WDT->STATUS.bit.SYNCBUSY);
-    SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
-    printk("AWAKE!");
+void button2_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
+    //peep();
+    //printk("Button 2 pressed\n");
+    pressed=true;
 }
 
-const struct device *button;
-const struct device *led;
 
-// Blink LED0 5 times
-void blink() {
-    bool led_is_on = false;
-    for (int x=0; x<10; x++) {
-        gpio_pin_set(led, LED0_GPIO_PIN, (int) led_is_on);
-        led_is_on = !led_is_on;
-        k_msleep(SLEEP_TIME_MS);
-        
+
+
+
+
+
+
+
+void HAL_PWR_EnableWakeUpPin(uint32_t WakeUpPinPolarity)
+{
+  assert_param(IS_PWR_WAKEUP_PIN(WakeUpPinPolarity));
+
+  /* Specifies the Wake-Up pin polarity for the event detection
+    (rising or falling edge) */
+  MODIFY_REG(PWR->CR4, (PWR_CR3_EWUP & WakeUpPinPolarity), (WakeUpPinPolarity >> PWR_WUP_POLARITY_SHIFT));
+
+  /* Enable wake-up pin */
+  SET_BIT(PWR->CR3, (PWR_CR3_EWUP & WakeUpPinPolarity));
+
+
+}
+
+/**
+  * @brief Disable the WakeUp PINx functionality.
+  * @param WakeUpPinx: Specifies the Power Wake-Up pin to disable.
+  *         This parameter can be one of the following values:
+  *           @arg @ref PWR_WAKEUP_PIN1, PWR_WAKEUP_PIN2, PWR_WAKEUP_PIN3, PWR_WAKEUP_PIN4, PWR_WAKEUP_PIN5
+  * @retval None
+  */
+void HAL_PWR_DisableWakeUpPin(uint32_t WakeUpPinx)
+{
+  assert_param(IS_PWR_WAKEUP_PIN(WakeUpPinx));
+
+  CLEAR_BIT(PWR->CR3, (PWR_CR3_EWUP & WakeUpPinx));
+}
+
+
+
+
+
+
+
+void button3_pressed(const struct device *dev, struct gpio_callback *cb, uint32_t pins) {
+    //peep();
+    //printk("Button 3 pressed\n");
+    printk("GOING TO SLEEP....zzzzzzzzzz\n\n");
+    pressed = true;
+    
+      
+    LL_PWR_DisableWakeUpPin(LL_PWR_WAKEUP_PIN1);
+    
+    LL_PWR_ClearFlag_WU1();
+    if (LL_PWR_IsActiveFlag_WU1()) {
+        LL_PWR_ClearFlag_WU1();
     }
+    
+    LL_PWR_EnableWakeUpPin(LL_PWR_WAKEUP_PIN1);
+    
+    //for checking if it comes from a reset
+    WRITE_REG( RTC->BKP31R, 0x1 );
+  
+    
+    LL_PWR_SetPowerMode(LL_PWR_MODE_SHUTDOWN);
+    //LL_PWR_SetPowerMode(LL_PWR_MODE_STOP0);
+
+
+    LL_LPM_EnableDeepSleep();
+    // Request Wait For Interrupt
+    __WFI();
+   
+    
+    /*
+
+  MODIFY_REG(PWR->CR1, PWR_CR1_LPMS, PWR_CR1_LPMS_SHUTDOWN);
+  SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
+
+#if defined ( __CC_ARM)
+  __force_stores();
+#endif
+  __WFI();
+  */
+
+    
+
 }
+
+bool timer_expired;
+extern void timer_expire(struct k_timer *timer_id) {
+    timer_expired=true;
+}
+
+
 
 void main() {
+    timer_expired = true;
+    printk("\n\n********** Deep Sleep with Cortex M4 *********\n\n");
+        init_buttons();
 
-    config_eic_clk();
+      if (READ_REG(RTC->BKP31R) == 1)
+  {
+     WRITE_REG( RTC->BKP31R, 0x0 );  /* reset back-up register */
+    /* Blink LED3 to indicate that the system was resumed from Standby mode */
+
+     peep(50);
+  }
 
     pressed=false;
-    int ret;
+    
 
-    button = device_get_binding(SW0_GPIO_LABEL);
-    led = device_get_binding(LED0_GPIO_LABEL);
 
-    if (button == NULL) {
-        printk("Error: didn't find %s device\n", SW0_GPIO_LABEL);
-        return;
-    }
-    if (led == NULL) {
-        printk("Error: didn't find %s device\n", LED0_GPIO_LABEL);
-        return;
-    }
+    blink(3,100);
+     
+k_timer_init(&timer, timer_expire, NULL);
+    
 
-    ret = gpio_pin_configure(led, LED0_GPIO_PIN, LED0_GPIO_FLAGS);
-    if (ret != 0) {
-        printk("Error %d: failed to configure LED device %s pin %d\n", ret, 
-                LED0_GPIO_LABEL, LED0_GPIO_PIN);
-        return;
-    }
 
-    ret = gpio_pin_configure(button, SW0_GPIO_PIN, SW0_GPIO_FLAGS);
-    if (ret != 0) {
-        printk("Error %d: failed to configure %s pin %d\n", ret, 
-                SW0_GPIO_LABEL, SW0_GPIO_PIN);
-        return;
-    } 
 
-    ret = gpio_pin_interrupt_configure(button, SW0_GPIO_PIN,
-            GPIO_INT_EDGE_RISING | GPIO_INT_DEBOUNCE);
-    if (ret != 0) {
-        printk("Error %d: failed to configure interrupt on %s pin %d\n", ret, 
-                SW0_GPIO_LABEL, SW0_GPIO_PIN);
-        return;
-    }
-
-    gpio_init_callback(&button_cb_data, button_pressed, BIT(SW0_GPIO_PIN));
-    gpio_add_callback(button, &button_cb_data);
-
-    EIC->WAKEUP.reg |= (1 << 5U); // Configured in EXTINT5 for PA21
-
+        int n=0;
     while (1) {
         if (pressed) {
-            blink();
-            pressed=false;
-            sleep(); // Go to deep sleep
+
+            blink(3,50);
+            peep(50);
+            pressed = false;
+            printk("Pressed %d...\n",n);
+            n++;
         }
-        k_msleep(1);
+        
+        if (timer_expired) {
+            blink(3,50);
+            //printk("Timer Expired!!!\n");
+            k_timer_start(&timer, K_MSEC(500), K_MSEC(0));
+            timer_expired=false;
+        }
+
+        //peep();
+        //printk("Hola %d\n",n);
+        //blink(3);        
+        //k_msleep(1);
+        
+
     }
 
 }
